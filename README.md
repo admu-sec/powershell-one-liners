@@ -11,7 +11,6 @@ A collection of useful PowerShell one-liners, organized by category.
 - [Text Processing](text-processing/)
 - [Processes](processes/)
 - [User Management](user-management/)
-- [Fun](fun/)
 
 ## Usage
 
