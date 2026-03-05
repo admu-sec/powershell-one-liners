@@ -13,3 +13,4 @@ One-liners for system information and management.
 | Get battery status | `(Get-WmiObject Win32_Battery).EstimatedChargeRemaining` |
 | Get Windows version | `(Get-WmiObject Win32_OperatingSystem).Caption` |
 | Get installed RAM | `(Get-WmiObject Win32_ComputerSystem).TotalPhysicalMemory / 1GB` |
+| **Top 10 CPU consuming processes** | `Get-Process | Sort-Object CPU -Descending | Select-Object -First 10` |
