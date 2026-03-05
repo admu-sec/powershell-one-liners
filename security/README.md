@@ -19,3 +19,5 @@ One-liners for security and permissions.
 | **Find files in System32 modified < 24h** | `Get-ChildItem C:\Windows\System32 -File | Where-Object {$_.LastWriteTime -gt (Get-Date).AddDays(-1)}` |
 | **Find processes without a Window title** | `Get-Process | Where-Object {$_.MainWindowTitle -eq ""} | Select-Object ProcessName, Id` |
 | **Search Event Log for failed logins** | `Get-EventLog -LogName Security -InstanceId 4625 -Newest 10` |
+| **Find hidden files in C:** | `Get-ChildItem -Path C:\ -Recurse -Hidden -File -ErrorAction SilentlyContinue` |
+| **List scheduled tasks (Ready)** | `Get-ScheduledTask | Where-Object {$_.State -ne "Disabled"} | Select-Object TaskName, TaskPath` |
