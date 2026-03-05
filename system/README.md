@@ -14,3 +14,4 @@ One-liners for system information and management.
 | Get Windows version | `(Get-WmiObject Win32_OperatingSystem).Caption` |
 | Get installed RAM | `(Get-WmiObject Win32_ComputerSystem).TotalPhysicalMemory / 1GB` |
 | **Top 10 CPU consuming processes** | `Get-Process | Sort-Object CPU -Descending | Select-Object -First 10` |
+| **List installed programs** | `Get-ItemProperty HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\* | Select-Object DisplayName, DisplayVersion` |
