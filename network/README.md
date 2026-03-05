@@ -14,3 +14,4 @@ One-liners for network-related tasks.
 | Get MAC address | `Get-NetAdapter | Select-Object Name, MacAddress` |
 | Show routing table | `Get-NetRoute | Select-Object DestinationPrefix, NextHop, RouteMetric` |
 | Get Wi-Fi speed | `(Get-NetAdapter | Where-Object { $_.Name -like "*Wi-Fi*" }).LinkSpeed` |
+| **Show established connections** | `Get-NetTCPConnection -State Established | Select-Object RemoteAddress, RemotePort, OwningProcess` |
